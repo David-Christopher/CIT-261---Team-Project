@@ -1,0 +1,68 @@
+h1{
+	color: #191919;
+	font-size: 40px;
+	font-weight: 100;
+}
+
+#sectionChangingColor h1, #blueSection h1{
+	color: #1919E8;
+	max-width: 760px;
+	margin: auto;
+}
+
+#sectionChangingColor{
+	text-align: center;
+	background-color: #ff9333;
+    padding-bottom: 30px; 
+}
+
+#colorButton{
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#buttonPosition{
+	text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#testButton{
+	cursor: pointer;	
+}
+
+#buttonPosition:hover h1, #blueSection:hover h1, #sectionChangingColor:hover h1{
+	font-weight: bolder;	
+	transition: font-weight .3s ease-in-out;
+}
+
+#blueSection{
+	text-align: center;
+	background-color: #1919E8;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#blueSection h1{
+	color: #ffffff;
+}
+
+#on_offSection{
+	text-align: center;
+}
+
+#onOffButton{
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#clrName{
+	margin-top: 20px;
+}
+
+.page-content-container{
+	max-width: 1060px;
+	margin: auto;
+}
+
+

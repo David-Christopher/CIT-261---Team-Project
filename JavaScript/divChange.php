@@ -18,7 +18,7 @@
                         <input type="text" id="clrName" placeholder="Red, Pink, #d3d3d3"></input><br/>
                         <input type="submit" value="Change Color" id="colorButton" onclick="displayColor()">
                     </div>
-<!--JQuery Outside the Scope of This Class -->                   
+<!--JQuery Outside the Scope of This Class                   
                     <div id="buttonPosition">
                         <h1>See What I Do!</h1>
                         <button id="testButton" type="button">Click Me</button>
@@ -28,7 +28,7 @@
                     </div>
                     <div id="on_offSection">
                         <button id="onOffButton" type="button">Click Off</button>
-<!--JQuery Outside the Scope of This Class -->
+JQuery Outside the Scope of This Class -->
                     </div>
                 </main>
                 <footer>

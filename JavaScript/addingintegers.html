@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+<title>Adding Up Odd Integers</title>
+<script type="text/javascript">
+/* Input: An integer is input by user.
+ * Processing: Adds all the odd integers between 1 and users integer. 
+ * Output: The sum of odd integers.
+ */
+function integer() {
+    var n = parseInt(document.getElementById('integerBox').value);
+    if(n < 1)
+    {
+    return 0;
+    }
+    else
+    {
+    var sum = 0;
+    for(var i = n; i > 0; i--)
+    {
+        if(i % 2 != 0) 
+        {
+            sum = sum + i;
+        }
+    }
+    }
+    document.getElementById("outputDiv").innerHTML = sum;
+}
+
+</script>
+</head>
+
+<body>
+    Please enter an integer: <input type="text" id="integerBox"><br>  
+    <button type="button" onclick="integer()">Add Odd Integers</button>  
+    <div id="outputDiv"></div> 
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+<title>How Many Acres?</title>
+<script type="text/javascript">
+ /* 
+	Input: 
+	-user enters width of parcel in feet.
+	-user enters lenght of parcel in feet.
+
+	Processing:
+	-Multiply user's input of width and length. 
+	-Divide total from width x length in 43560.
+
+	Output:
+	-Converted acre total.
+ */
+
+function acres() {
+    var widthFeet = parseFloat(document.getElementById('widthFeet').value);
+    var lengthFeet = parseFloat(document.getElementById('lengthFeet').value);
+    
+    var totalAcres = (widthFeet * lengthFeet)/43560;
+    
+    var digits = 2;
+    var multiplier = Math.pow(10, digits);
+    totalAcres = Math.round(totalAcres * multiplier) / multiplier;
+  
+
+    document.getElementById('outputDiv').innerHTML = totalAcres;
+    
+}
+</script>
+</head>
+
+<body>
+    <h1>How Many Acres?</h1>
+    Width (feet) <input type="text" id="widthFeet"><br/>
+    Length (feet) <input type="text" id="lengthFeet"><br/><br/>
+    <button type="button" onclick="acres()">Compute Size</button><br>
+    Size (acres) <div id="outputDiv"></div>
+</body>
+</html>

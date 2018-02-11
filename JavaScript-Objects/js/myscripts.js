@@ -1,57 +1,10 @@
 
-function newName(optionA) {
+function newName() {
+    var sValue = document.getElementById("newName");
+    var i = sValue.options[sValue.selectedIndex].value;
 
-    var character = {
-        firstName: "John",
-        lastName : "Doe",
-        id       : 1,
-        fullName : function() {
-           return this.firstName + " " + this.lastName;
-        }
-    };
+    var name = ["Choose An Option", "John Doe the diligent", "Mary Jane the kind", "Bob Dylan the talented", "Chris David the brave"];
 
-    document.getElementById("display").innerHTML = character.fullName();
+    document.getElementById("display").innerHTML = name[i];
+
 }
-
-function newName(optionB) {
-
-    var character = {
-        firstName: "Mary",
-        lastName : "Jane",
-        id       : 1,
-        fullName : function() {
-           return this.firstName + " " + this.lastName;
-        }
-    };
-
-    document.getElementById("display").innerHTML = character.fullName();
-}
-
-function newName(optionC) {
-
-    var character = {
-        firstName: "Bob",
-        lastName : "Dillan",
-        id       : 1,
-        fullName : function() {
-           return this.firstName + " " + this.lastName;
-        }
-    };
-
-    document.getElementById("display").innerHTML = character.fullName();
-}
-
-function newName(optionD) {
-
-    var character = {
-        firstName: "Chris",
-        lastName : "David",
-        id       : 1,
-        fullName : function() {
-           return this.firstName + " " + this.lastName;
-        }
-    };
-
-    document.getElementById("display").innerHTML = character.fullName();
-}
-

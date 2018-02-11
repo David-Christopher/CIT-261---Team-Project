@@ -14,13 +14,14 @@
                     <div id="sectionChangingColor">
                         <h1>Choose a Character</h1>
                         <p>Choose an option from the drop down menu to change the character name. This interacts with different JavaScript Objects and displays it here:</p>
+                        The new character name is:
                         <p id="display"></p>
-                        <select name="newName" onchange="newName(this.value);"> 
-                          <option value="">Choose An Option</option>
-                          <option value="optionA">John Doe</option>
-                          <option value="optionB">Mary Jane</option>
-                          <option value="optionC">Bob Dillian</option>
-                          <option value="optionD">Chris David</option>
+                        <select id="newName" name="newName" onchange="newName();"> 
+                          <option value="0">Choose An Option</option>
+                          <option value="1">John Doe</option>
+                          <option value="2">Mary Jane</option>
+                          <option value="3">Bob Dillian</option>
+                          <option value="4">Chris David</option>
                         </select>
                     </div>
                     </div>

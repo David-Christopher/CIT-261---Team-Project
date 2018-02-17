@@ -1,0 +1,560 @@
+@charset "utf-8";
+/* CSS Document */
+/*****************/
+/*
+/* Author: Christopher D.
+/*
+/* Purpose: Responsive web design stylesheet.
+/*
+**/
+
+@media all { 
+
+/*Media all fits smallest screen size starting at 300px*/
+
+/*****************************************************/
+/*****         START HEADER AND nav BAR          *****/
+
+	body {
+		overflow-x: hidden;
+		min-width: 300px;
+	}
+
+	p {
+		font-family: "Source Sans Pro Light", sans-serif;
+	}
+
+	div#header.new-header {
+		height: 65px;
+	    min-width: 310px;
+	    width: 100%;
+    	z-index: 10;
+		box-shadow: 0px 0px 7px 0px #444;      
+	}		
+
+	div.header-container {
+		display: inline-block;
+		width: 100%;
+		height: 65px; 
+		position: relative;
+		background-color: #4e7687;
+	}
+
+	div.logo {
+		float: left;
+		width: 200px;
+  	    margin: auto;
+	}
+
+	div.logo img {
+    	margin: 15px 5px 15px 12px;			
+	    width: 35.58px;
+	    height: 35px;
+	    float: left;
+	}
+
+	div.logo h1 {
+	    font-family: "Source Sans Pro Light";
+	    color: #FFF;
+	    text-align: center;
+	    font-size: 35px;
+    	margin: 10px 0px;	    
+	}
+
+	div.nav-mobile li, div.nav li {
+		display: none;
+	}	
+	
+	div.nav {
+		float: right;
+        margin: 21px 15px 0px 24px;
+        width: 60px;
+        border: none;
+        min-width: 0%;
+        height: 0px;			
+	    background-color: #4e7687;
+	}	
+
+
+
+/* Start Mobile Phone responsive css menu button*/
+	.sliding-bg, .sliding-bg-active {
+	    z-index: 90;
+	    position: absolute;
+	    height: 100%;
+	    width: 80%;
+	    right: -450px;
+	    top: 0;
+	    overflow-x: hidden;
+	    margin-left: 20%;
+	    background-color: #eee;
+	    border-left: 1px solid #ccc;
+	    box-shadow: 0px 0px 90px 0px #444;
+	    transition: all 1s ease-in-out;
+	}
+
+	.sliding-transparent-Bckgrnd, .sliding-transparent-Bckgrnd-active {
+		z-index: 88;
+	    position: absolute;
+	    height: 100%;
+	    width: 20%;
+	    top: 0;
+	    overflow-x: hidden;
+	    margin-right: 80%;
+	    background-color: black;
+	    opacity: .5;
+	    transition: all 1s ease-in-out;
+	    right: -530px;
+	}
+
+  	.sliding-bg-active,	.sliding-transparent-Bckgrnd-active {
+	    right: 0px;
+	}
+
+	.sliding-transparent-Bckgrnd-active a {
+		z-index: 89; 
+		position: absolute; 
+		height: 100%; 
+		width: 100%;
+		top: 0;
+    	left: 0;
+    	overflow-x: hidden;
+	}
+
+  	.sliding-bg a.closebtn {
+  		position: absolute;
+	    top: 10px;
+	    left: 15px;
+  		font-size: 36px;
+  		margin-right: 50px;
+  	}
+
+  	div.nav li.icon {
+	    float: right;
+	    display: inline-block;
+ 	}
+
+ 	div.nav-mobile {
+		position: relative;
+	}
+
+	 div.nav-mobile.responsive {
+		position: relative;
+		right: 0;
+	}
+  
+  	div.nav-mobile ul {
+    	margin-top: 50px;
+    	position: relative;
+	}
+
+  	div.nav-mobile li.icon {
+	    right: 16px;
+	    position: absolute;
+	    display: block;
+	    background-image: none;
+		background: #4e7687;
+  		font-weight: 700;
+  		font-size: large;
+	    color: white;
+	    text-decoration: none;
+	    font-family: "Source Sans Pro Light";
+	    border-radius: 5px 5px;
+  		border: 1px solid #4e7687;
+  		top: -29px;
+  	}
+
+  	div.nav-mobile li.icon:hover {
+  		background-image: none;
+  		background: #6a95a8;
+  		color: lightgrey;
+  		font-weight: 700;
+	    text-align: center;
+	    transition: .7s;
+	    border-radius: 5px 5px;
+	}
+
+  	div.nav-mobile li {
+	    float: none;
+	    display: inline;
+  	}
+
+	div.nav-mobile li a {
+	    padding: 2px 13px;
+	    display: block;
+	    color: white;
+	}
+
+  	.nav ul li:nth-child(0n+6) a {
+  		width: 60px;
+  		background-image: none;
+ 	    background: #6a95a8;
+  		font-weight: 700;
+  		font-size: large;
+  		text-align: center;
+  		border-radius: 4px;
+  		border: 1px solid #bdbdbd;
+  	}
+
+  	.nav ul li:nth-child(0n+6) a:hover {
+  		width: 60px;
+  		background-image: none;
+  		background: #80acbf;
+  		color: lightgrey;
+  		font-weight: 700;
+  		text-align: center;
+  		transition: .7s;
+  	}
+
+    div.nav-mobile li span.header-divider {
+  		display: none;
+  	}
+
+	div.nav-mobile li a.menu-feature, div.nav-mobile li a.menu-reviews, div.nav-mobile li a.menu-pricing, div.nav-mobile ul li:nth-child(0n+4) a, div.nav-mobile li a.menu-support {
+    	position: relative;
+    	text-align: center;	
+    	margin: auto;
+    	top: 50px;
+    	right: -13.5px;
+    	min-width: 278px;
+		background-color: #fff;
+	}
+
+	div.nav-mobile li a.menu-feature:hover, div.nav-mobile li a.menu-reviews:hover, div.nav-mobile li a.menu-pricing:hover, div.nav-mobile li a.menu-support:hover {
+		background: #4e7687;
+		color: white;
+		border-radius: 0px;
+    	font-weight: bolder;
+	}
+
+  	div.nav-mobile li a.menu-feature, div.nav-mobile li a.menu-reviews, div.nav-mobile li a.menu-pricing, div.nav-mobile ul li:nth-child(0n+4) a, div.nav-mobile li a.menu-support {
+    	font-family: "Source Sans Pro Light";
+    	right: 1px;
+    	top: 15px;
+    	min-height: 45px;
+    	padding-top: 10px;
+    	border-radius: 0px;
+    	background: lightgrey;
+		border: 1px solid silver;
+    	color: black;
+    	font-size: 28px;
+    	text-align: left;
+    	z-index: 100;
+	}
+
+	div.nav-mobile ul li:nth-child(0n+4) a {
+   		background-image: linear-gradient(#BA0F2A, #BA0F2A);
+   		font-size: 28px;
+   		text-align: left;
+    	padding: 8px 0px 2px 13px;
+    	border: 0px;
+    	color: white;
+	}
+
+	div.nav-mobile ul li:nth-child(0n+4) a:hover {
+    	color: #BA0F2A;
+    	background: white;
+    	font-weight: bolder; 
+    	border: 2px solid #BA0F2A;
+    	margin: auto;
+  		padding: 6px 0px 0px 11px;
+  		min-width: 180px;
+	}
+/*End Mobile Phone responsive css menu button*/
+
+
+/*****          END HEADER AND nav BAR           *****/
+/*****************************************************/
+
+
+}
+
+@media all and (min-width: 450px) {
+
+/*****************************************************/
+/*****          START HEADER AND nav BAR         *****/
+
+
+	div.logo {
+		width: 250px;
+	}
+
+	div.logo img {
+    	margin: 12px 10px 15px 25px;			
+	    width: 40px;
+	    height: 40px;
+	}
+		
+	div.logo h1 {
+	    font-size: 40px;
+    	margin: 8px 0px;
+	}
+
+	div.nav {
+        margin: 19px 40px 0px 24px;
+    	z-index: 10;
+		box-shadow: none;              
+    }
+
+/*Start Mobile Phone responsive css menu button*/
+  	.sliding-bg a.closebtn {
+  	  	left: 25px;
+  	}
+
+  	.nav ul li:nth-child(0n+6) a {
+  		width: 100px;
+  		height: 25px;
+		font-size: larger;
+	}
+
+  	.nav ul li:nth-child(0n+6) a:hover {
+  		width: 100px;
+  		height: 25px;  		
+  	} 
+
+	div.nav-mobile li.icon {
+	    right: 39px;
+	    top: -32px;
+	}
+
+	div.nav-mobile li a {
+	    padding: 3px 30px;
+	    font-size: larger;
+	}
+
+	div.nav-mobile ul li:nth-child(0n+4) a {
+   		padding-left: 31px;
+   	}
+
+   	div.nav-mobile ul li:nth-child(0n+4) a:hover {
+   		padding-left: 29px;
+   	}
+/*End Mobile Phone responsive css menu button*/
+
+
+/*****          END HEADER AND nav BAR           *****/
+/*****************************************************/
+
+}
+
+@media all and (min-width: 525px) {	
+
+/*****************************************************/
+/*****          START HEADER AND nav BAR         *****/	
+
+
+	div#header.new-header {
+		height: 70px;
+	}
+
+	div.header-container {
+		display: block;
+		padding-bottom: 0px;
+	}
+
+	div.logo {
+		width: 194px;
+  	    float: none;
+	}
+
+	div.logo img {
+    	margin: 9px 10px 3px 35px;
+	    width: 48px;
+	    height: 48px;		    
+	}
+
+	div.logo h1 {
+	    font-size: 48px;
+	    margin: 3px 10px;
+	}
+	
+	div.nav {
+	    min-width: 100%;
+	    margin: auto;
+        border-top: 2px solid #3CECC0;
+    	height: 29px;
+	    padding-top: 8px;
+	}		    
+
+	div.nav ul {
+		float: none;
+	}
+
+  	div.nav li {
+		display: inline-block;
+		margin-top: -5px;
+	}
+
+	span.header-divider {
+	    font-size: 20px;
+	    top: -10px;
+	}
+	
+	a.menu-feature, a.menu-reviews, a.menu-pricing {
+    	margin-top: -10px;
+	}
+
+	a.menu-trial {
+    	margin-top: 1px;
+	}
+
+  	div.nav li.free-trial{
+  		top: -2px;
+	}
+
+	.nav ul li:nth-child(0n+4) a {
+		width: 95px;
+	}
+
+	.nav li a, .nav a:visited {
+		padding-bottom: 5px;
+		font-size: 20px;
+	}
+
+	div.nav ul li#support-nav-link {
+		display: none;
+	}
+
+	div.nav ul span#last-nav-divider {
+		display: none;
+	}
+
+	div.nav li.icon {
+		display: none;
+	}
+
+	div.footer-header span.not-mobile {
+		display: inline;
+	}
+
+	div.footer-header span.mobile-tagged {
+		display: none;
+	}
+	
+	div.nav-mobile {
+		display: none;
+	}
+
+	.sliding-bg-active, .sliding-bg {
+ 	    display: none; 
+	}
+
+	.sliding-transparent-Bckgrnd-active, .sliding-transparent-Bckgrnd {
+ 	    display: none; 
+	}
+
+
+
+/*****          END HEADER AND nav BAR           *****/
+/*****************************************************/
+
+}
+
+@media all and (min-width: 705px) {	
+
+/*****************************************************/
+/*****          START HEADER AND nav BAR         *****/
+
+	div.nav ul li#support-nav-link {
+		display: inline-block;
+	}
+
+	div.nav ul span#last-nav-divider {
+		display: inline-block;
+	}
+
+	span.header-divider {
+	    top: -12px;
+	}
+	
+	a.menu-feature, a.menu-reviews, a.menu-pricing {
+    	margin-top: -12px;
+	}
+
+	.nav ul li:nth-child(0n+4) a {	
+		padding: 4px 3px 4px 3px;
+		margin-top: -13px;
+	}	
+
+
+/*****          END HEADER AND nav BAR           *****/
+/*****************************************************/
+
+}
+
+@media all and (min-width: 1060px) {
+
+/*****************************************************/
+/*****          START HEADER AND nav BAR         *****/
+
+
+	div.header-container {
+		max-width: 1600px; 
+    	margin-right: auto;
+    	margin-left: auto;		
+	}
+
+	div.logo {
+    	margin: 9px 0px 0px 45px;		
+		width: 215px;
+  	    float: left;
+	}
+	
+	div.logo img {
+		margin: 7px 0px 0px 0px;
+	    width: 40px;
+	    height: 40px;		    
+	}
+
+	div.logo h1 {	
+		font-size: 40px;
+    	float: left;
+    	margin: 0px 0px 0px 10px;
+    	text-align: center;
+	}	
+	
+	div.nav {
+		float: right;
+		padding: 0px;
+		display: inline-block;
+		min-width: 710px;	
+		margin: 22px 45px 0px 0px;
+		border: none;
+	}	
+
+	div.nav ul {
+		float: right;
+	    list-style-type: none;
+	    margin: 0px;
+	    padding: 0px;
+	    text-align: center;		
+	}	
+
+  	div.nav li {
+		position: relative;
+	}
+
+	.nav li a, .nav a:visited {
+		font-size: 25px;
+	}	
+
+	.nav ul li:nth-child(0n+4) a {
+		width: 118px;
+		margin: -1px;
+	}
+
+	span.header-divider {
+		font-size: 40px;
+	}
+
+	a.menu-feature, a.menu-reviews, a.menu-pricing {
+    	margin-top: 0px;
+	}
+	
+	a.menu-support {
+    	margin-bottom: 1px;
+	}
+
+/*****          END HEADER AND nav BAR           *****/
+/*****************************************************/
+}

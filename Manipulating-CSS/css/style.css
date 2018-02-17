@@ -21,40 +21,6 @@ h1{
 	cursor: pointer;
 }
 
-#buttonPosition{
-	text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#testButton{
-	cursor: pointer;	
-}
-
-#buttonPosition:hover h1, #blueSection:hover h1, #sectionChangingColor:hover h1{
-	font-weight: bolder;	
-	transition: font-weight .3s ease-in-out;
-}
-
-#blueSection{
-	text-align: center;
-	background-color: #1919E8;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-#blueSection h1{
-	color: #ffffff;
-}
-
-#on_offSection{
-	text-align: center;
-}
-
-#onOffButton{
-	margin-top: 20px;
-	cursor: pointer;
-}
 
 #clrName{
 	margin-top: 20px;
@@ -63,6 +29,22 @@ h1{
 .page-content-container{
 	max-width: 1060px;
 	margin: auto;
+}
+
+.resizeImageButton{
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#resizeImage img {
+    width: 50%;
+    margin: 100px auto 35px auto;
+    display: block;
+}
+
+#buttonPosition{
+	width: 408px;
+    margin: auto;
 }
 
 

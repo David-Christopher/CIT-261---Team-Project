@@ -1,0 +1,14 @@
+.animationViewport{
+  width: 800px;
+  margin: auto;
+  height: 800px;
+  position: relative;
+  background-color: lightblue;
+}
+
+.animation{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: #dddddd;
+}

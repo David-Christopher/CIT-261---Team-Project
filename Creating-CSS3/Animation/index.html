@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 Teach : Team Activity</title>
+    <link href="css/animationStyle.css" type="text/css" rel="stylesheet"/>
+</head>
+    <body>
+
+    <div class="animationViewport">
+        <div class="animation" id="animation">
+            
+        </div>
+    </div>
+        
+    </body>
+    <script type="text/javascript">
+    window.onload = function() {
+
+          var elem = document.getElementById("animation");   
+          var location = 0;
+          var id = setInterval(frame, 3);
+          function frame() {
+            if (location == 650) {
+              document.getElementById("animation").style.borderRadius = "180px";
+              document.getElementById("animation").style.backgroundColor = "#FFFFAD";
+              clearInterval(id);
+            } else {
+              location++; 
+              elem.style.top = location + 'px'; 
+              elem.style.left = location + 'px';
+            }
+          }
+    };
+
+    </script>
+</html>

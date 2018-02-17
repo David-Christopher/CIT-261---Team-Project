@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Transitions & Animations</title>
+
+<link rel="stylesheet" type="text/css" href="tc_styles.css" />
+<link rel="stylesheet" type="text/css" href="support-center-styles.css" />
+<link rel="stylesheet" type="text/css" href="responsive-support.css" />
+
+</head>
+<body>
+	<div class="sliding-transparent-Bckgrnd">
+		 <a href="javascript:void(0);" onclick="myFunction()"></a>
+	</div>
+	<div class="sliding-bg">
+	  <a href="javascript:void(0)" class="closebtn" onclick="myFunction()">&times;</a>
+    <div class="nav-mobile">
+		     	 <ul>
+			    	<li><a class="menu-feature" href='#'>Features</a><span class="header-divider">|</span></li>
+			    	<li><a class="menu-reviews" href='#'>Reviews</a><span class="header-divider">|</span></li>
+			    	<li><a class="menu-pricing" href='#'>Pricing</a><span class="header-divider">|</span></li>
+					<li class="free-trial"><a class="menu-trial" href="#">Free Trial</a><span id="last-nav-divider" class="header-divider">|</span></li>
+					<li id="support-nav-link"><a class="menu-support" href='#'>Support Center</a></li>
+			    	 <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">Menu</a>
+  					</li>	
+				</ul>
+
+		   </div><!-- end class nav -->
+     </div>
+	 <div id="header" class="new-header" style="position: fixed; top: 0px;">
+	  	     
+		 <div class="header-container">
+		  
+		   	<!-- div id="phoneHeader">435.753.4102 
+	  	   </div> <!-- end phoneHeader --> 
+		   
+		   	<div class="logo">
+				<a href="#"><h1>Transition</h1></a>
+	  	   </div><!-- end class logo -->
+           
+		   	<div class="nav">
+		     	 <ul>
+			    	<li><a class="menu-feature" href='#'>Features</a><span class="header-divider">|</span></li>
+			    	<li><a class="menu-reviews" href='#'>Reviews</a><span class="header-divider">|</span></li>
+			    	<li><a class="menu-pricing" href='#'>Pricing</a><span class="header-divider">|</span></li>
+					<li><a class="menu-trial" href='#'>Free Trial</a><span id="last-nav-divider" class="header-divider">|</span></li>
+					<li id="support-nav-link"><a class="menu-support" href='#'>Support Center</a></li>
+			    	
+			    	<li class="icon"><a href="javascript:void(0);" onclick="myFunction()">Menu</a>
+  					</li>	
+				</ul>
+		   </div><!-- end class nav -->
+		    
+		 </div><!--end Container-->
+		 
+    </div><!-- end Header -->
+	   	<script>
+			function myFunction() {
+				document.getElementsByClassName("sliding-bg")[0].classList.toggle("sliding-bg-active")
+				document.getElementsByClassName("sliding-transparent-Bckgrnd")[0].classList.toggle("responsive")
+				document.getElementsByClassName("sliding-transparent-Bckgrnd")[0].classList.toggle("sliding-transparent-Bckgrnd-active")
+	    		document.getElementsByClassName("nav-mobile")[0].classList.toggle("responsive");
+			}
+		</script>    
+    </body>
+</html>

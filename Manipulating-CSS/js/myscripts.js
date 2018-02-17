@@ -9,29 +9,44 @@ function displayColor() {
 	div.style.backgroundColor = colorValue;
 }
 
+function largerImage() {
+    if (document.getElementById("imageSizing").style.width < "51%"){
+        document.getElementById("imageSizing").style.width = "75%";
+        return;
+    }
+    if (document.getElementById("imageSizing").style.width < "76%"){
+        document.getElementById("imageSizing").style.width = "95%";
+        return;
+    }
+    if (document.getElementById("imageSizing").style.width < "99%"){
+        document.getElementById("imageSizing").style.width = "100%";
+        return;
+    }
+}
 
-//JQuery --- Outside the Scope of the Class
-///////////////////////////////////////////
-$(document).ready(function() {
-	//Click Me button toggle text
-    $("#testButton").click(function () {
-        $(this).text(function(i, displayClicked){
-            return displayClicked === 'Click Me' ? 'Clicked!' : 'Click Me'
-        })
-    });
+function smallerImage() {
+    if (document.getElementById("imageSizing").style.width == "100%"){
+        document.getElementById("imageSizing").style.width = "95%";
+        return;
+    }
+    if (document.getElementById("imageSizing").style.width == "95%"){
+        document.getElementById("imageSizing").style.width = "75%";
+        return;
+    }
+    if (document.getElementById("imageSizing").style.width == "75%"){
+        document.getElementById("imageSizing").style.width = "50%";
+        return;
+    }
+    if (document.getElementById("imageSizing").style.width == "50%"){
+        document.getElementById("imageSizing").style.width = "25%";
+        return;
+    }
+    if (document.getElementById("imageSizing").style.width == "25%"){
+        document.getElementById("imageSizing").style.width = "20%";
+        return;       
+    }
+}
 
-    //Click On/Off button toggle text
-    $("#onOffButton").click(function () {
-        $(this).text(function(i, On_Off){
-            return On_Off === 'Click Off' ? 'Click On' : 'Click Off'
-        })
-    });
-
-    //Fade in and out div
-    $("#onOffButton").click(function() {
-        $( "#blueSection" ).toggle( "highlight" );
-    });
-});
-///////////////////////////////////////////
-//JQuery --- Outside the Scope of the Class
-
+function normalImage() {
+    document.getElementById("imageSizing").style.width = "50%";
+}

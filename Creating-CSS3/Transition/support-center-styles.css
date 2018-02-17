@@ -1,0 +1,130 @@
+/* CSS Document */
+@font-face {font-family: Source Sans Pro Light; src: url(fonts/source-sans-pro/SourceSansPro-Light.otf);}
+@font-face {font-family: Source Sans Pro Regular; src: url(fonts/source-sans-pro/SourceSansPro-Regular.otf);}
+@font-face {font-family: Open Sans Regular; src: url(fonts/open-sans/OpenSans-Regular.ttf);}
+body, h2 {font-family: "Source Sans Pro Regular";}
+h1 {font-family: "Source Sans Pro Light";}
+p {font-family: "Open Sans Regular"; font-size: 16px;}
+
+#header {
+	position: absolute;
+	background-color: #4e7687;
+	height: 85px;
+}
+.header-container {width: 100%; max-width: 1600px; margin-right: auto; margin-left: auto; clear: both;}
+.new-header, .support-header { -moz-box-shadow: 0px 0px 7px 0px #444; -webkit-box-shadow: 0px 0px 7px 0px #ccc; box-shadow: 0px 0px 7px 0px #444;}
+.logo {width: 350px; margin: 7px 0px 0px 5em; float: left;}
+.logo img {margin: 7px 0px 0px 0px; float: left;}
+.logo h1 {font-family: "Source Sans Pro Light"; color: #FFF; font-size: 56px; float: left; margin: 0px 0px 0px 10px;}
+.nav {margin: 23px 5em 0px 0px; width:758px; float:right;}
+.nav ul {float: right;}
+.nav li a, .nav a:visited {font-family: "Source Sans Pro Light"; text-transform:none; font-size: 28px; color: #fff;}
+span.header-divider {font-family: "Source Sans Pro Light"; color: #fff; margin: 0px 7px 0 7px; font-size: 40px; position: relative; top: -10px;}
+.nav li a:hover{
+	background-color: #fff;
+	color: #4e7687;
+	border-radius: 5px;
+}
+.support-header {
+	display: block;
+	visibility: visible;
+	height:50px;
+	width:100%;
+	z-index:9999;
+	position: relative;
+	top: 88px;
+	border-bottom-width:thin;
+	border-bottom-style:solid;
+	border-bottom-color:#CCCCCC;
+	background-color:#1F7CA5;
+}
+.support-header-toggle-scrolling {
+	position: fixed;
+	top: 0px;
+}
+.support-heading {float: left; width: 358px; margin: 0px 0px 0px -45px;}
+.support-nav{float: right; margin-top: 10px;}
+.support-nav ul{list-style-type:none; text-align:center;}
+.support-nav li a, .support-nav a:visited{
+	list-style-type:none;
+	float:left;
+	display:block;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	padding-bottom:2px;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:"Source Sans Pro Light";
+	font-size:18px;
+	text-align:center;
+	color:#fff;
+}
+.support-nav li a:hover{
+	background-color: #fff;
+	color: #0072B0;
+	border-radius: 5px;
+}
+.support-nav li a.current {
+	background-color: #fff;
+	color: #0072B0;
+	border-radius: 5px;
+}
+.nav-hamburger {display: none;} .nav-hamburger img {}
+.navigation {margin: 0px auto; padding: 10px 0px 20px 0px; width: 200px; text-align: center; position: relative; bottom: 0px;} .navigation p {display: none;}
+.navigation {display: none;}
+.move-down, .move-up {margin: 0px auto; padding: 0px 0px 20px 0px; display: block; width: 45px; background-repeat:no-repeat; text-indent: -9999px;}
+.move-down {background-image:url(../images/support-center/optimized/down-carat-edge-final.png)} .move-up {background-image:url(../images/support-center/optimized/up-carat-edge-final.png)}
+.move-down:hover {background-image:url(../images/support-center/down-carat-edge-hover-final.png)} .move-up:hover {background-image:url(../images/support-center/up-carat-edge-hover-final.png)}
+.anchor {position: relative; visibility:hidden; top: -77px;} .anchor-plus {top: -105px;}
+
+
+/********************************/
+/* NAV FREE TRIAL Red BUTTON */
+
+.nav ul li:nth-child(0n+4) a {
+	width: 118px;
+	background-image:  -webkit-linear-gradient(#BA0F2A, #BA0F2A); /* For Safari 5.1 to 6.0 */
+    background-image: -o-linear-gradient(#BA0F2A, #BA0F2A); /* For Opera 11.1 to 12.0 */
+    background-image: -moz-linear-gradient(#BA0F2A, #BA0F2A); /* For Firefox 3.6 to 15 */
+    background-image: linear-gradient(#BA0F2A, #BA0F2A); /* Standard syntax */
+	border-radius: 5px 5px 5px 5px;
+	padding: 2px 3px 2px 3px;
+}
+.nav ul li:nth-child(0n+4) a:hover {
+	color: #BA0F2A;
+	background-image:  -webkit-linear-gradient(#fff, #fff); /* For Safari 5.1 to 6.0 */
+    background-image: -o-linear-gradient(#fff, #fff); /* For Opera 11.1 to 12.0 */
+    background-image: -moz-linear-gradient(#fff, #fff); /* For Firefox 3.6 to 15 */
+    background-image: linear-gradient(#fff, #fff); /* Standard syntax */
+}
+
+/*IF IE 8 or 9 */
+
+.freetrial-ie8 {
+	position: absolute;
+	z-index: 10;
+	margin: 0 0 0 -104px;
+	background-image: url(http://www.timeclick.com/tc/images/freetrial-ie8-nav-background.png);
+	background-repeat: no-repeat;
+}
+.freetrial-ie8 a {
+	color: #fff;
+}
+.freetrial-ie8:hover {
+	background-image: url(http://www.timeclick.com/tc/images/freetrial-ie8-nav-background-hover.png);
+}
+
+.freetrial-ie9 {
+	position: absolute;
+	z-index: 10;
+	margin: 0 0 0 -114px;
+	background-image: url(http://www.timeclick.com/tc/images/freetrial-ie8-nav-background.png);
+	background-repeat: no-repeat;
+}
+.freetrial-ie9 a {
+	color: #fff;
+}
+.freetrial-ie9:hover {
+	background-image: url(http://www.timeclick.com/tc/images/freetrial-ie8-nav-background-hover.png);
+}

@@ -1,1 +1,7 @@
-//examplesStyle.css
+/*examplesStyle.css*/
+
+#invisibleRowA, #invisibleRowB, #invisibleSeperator{
+	display: none;
+	background-color: #fff7e5;
+	padding: 15px;
+}

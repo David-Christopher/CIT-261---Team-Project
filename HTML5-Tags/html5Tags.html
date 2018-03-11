@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Code Topic</title>
+
+    <script
+		src="http://maps.googleapis.com/maps/api/js">
+	</script>
+    <script>
+		function initialize() {
+		  var mapProp = {
+		    center:new google.maps.LatLng(37.395059, -122.150378),
+		    zoom:17,
+		    mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	<style type="text/css">
+		canvas{
+			width: 560px;
+			height: 250px;
+			border: 1px solid #dddddd;
+		}
+	</style>
+</head>
+    <body>
+        <div class="wrapper"><!--background image applied here-->
+            <div class="page-content-container"><!--content container applied here-->
+                <main>
+                    <div>
+						<h3 class="homeIntro">Tesla Google Map of Location</h3>
+						<div id="googleMap" style="max-width:1000px; height:400px;"></div><br>
+
+						<h3 class="homeIntro">New Tesla Roadster-Using YouTube iframe</h3>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/tw4jkyfY4HE" frameborder="0" encrypted-media" allowfullscreen></iframe> <br>
+
+						<h3 class="homeIntro">Gaming Music-Using SoundCloud iframe</h3>
+						<iframe width="560" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/279415493&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><br>
+
+						<h3 class="homeIntro">Piano Music- OGG and MP3 Files</h3>
+						<audio controls>
+						    <source src="audio/piano.ogg" type="audio/ogg">
+						    <source src="audio/piano.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio><br><br>
+
+						<h3 class="homeIntro">This is an HTML Canvas.</h3>
+						<p>Press a button below to "draw" on the Canvas.</p>
+						<canvas id="canvas">
+							
+						</canvas><br>
+
+						<input type="button" value="Change background to Red" onclick="changeRed()">
+						<input type="button" value="Make Small Boxes" onclick="makeBoxes()">
+						<input type="button" value="Remove Small Boxes" onclick="removeBoxes()"><br><br><br>
+
+					</div>
+
+                </main>
+                <footer>
+                <script type="text/javascript">
+                	function changeRed(){
+                		var backgroundCanvas = document.getElementById("canvas");
+                		backgroundCanvas.style.backgroundColor = "red";
+                	}
+
+                	function makeBoxes(){
+                		var backgroundCanvas = document.getElementById("canvas");
+                		backgroundCanvas.style.backgroundColor = "#ffffff"
+
+                		var context = backgroundCanvas.getContext("2d");
+                		context.fillStyle = "#dddddd";
+                		context.fillRect(10,10, 50, 50);
+                		context.fillStyle = "#000000";
+                		context.fillRect(80,10, 50, 50);
+
+                		context.fillStyle = "#000000";
+                		context.font = "40px";
+                		context.fillText("This is font in Canvas", 10, 80);
+                	}
+
+                	function removeBoxes(){
+                		var backgroundCanvas = document.getElementById("canvas");
+                		var context = backgroundCanvas.getContext("2d");
+						context.clearRect(0, 0, canvas.width, canvas.height);
+                	}
+                </script>
+                </footer>
+            </div><!--end of content container tag-->
+        </div>
+    </body>
+</html>
+
+    

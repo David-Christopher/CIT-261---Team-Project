@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard JS Events Code Topics</title>
+    <link href="css/animationStyle.css" type="text/css" rel="stylesheet"/>
+</head>
+    <body>
+
+    <div class="animationViewport">
+        <div class="animation" id="animation">
+            
+        </div>
+    </div>
+    <div id="buttonPosition">
+        <input onmouseover="mouseOver(this)" onmouseout="off1(this)" onmousedown="mousedown(this)" onmouseup="mouseup(this)" type="submit" value="Create a Triangle" onclick="trangleShape()">
+        
+        <input onmouseover="mouseOver(this)" onmouseout="off1(this)" onmousedown="mousedown(this)" onmouseup="mouseup(this)" type="submit" value="Make a PacMan" onclick="pacman()">
+
+        <input onmouseover="mouseOver(this)" onmouseout="off3(this)" onmousedown="mousedown(this)" onmouseup="mouseup(this)" type="submit" value="Reset Shape"  onclick="normal(this)">
+    </div>
+
+        
+    </body>
+    <script type="text/javascript">
+    window.onload = function() {
+
+          var elem = document.getElementById("animation");   
+          var location = 0;
+          var id = setInterval(frame, 3);
+          function frame() {
+            if (location == 650) {
+              document.getElementById("animation").style.borderRadius = "180px";
+              document.getElementById("animation").style.backgroundColor = "#FFFFAD";
+              clearInterval(id);
+            } else {
+              location++; 
+              elem.style.top = location + 'px'; 
+              elem.style.left = location + 'px';
+            }
+          }
+    };
+
+  function mouseOver(obj) {
+	    obj.style.backgroundColor = '#ffffff';
+	    obj.style.fontSize = '26px';
+	}
+
+	function off1(obj) {
+	    obj.style.backgroundColor = 'buttonface';
+	   	obj.style.fontSize = '14px'; 
+	}
+
+	function off2(obj) {
+	    obj.style.backgroundColor = 'buttonface';   
+	}
+
+	function off3(obj) {
+	    obj.style.backgroundColor = 'buttonface';
+	}
+
+	function mousedown(obj) {
+	    obj.style.backgroundColor = 'yellow';
+	}
+	
+	function mouseup(obj) {
+	    obj.style.backgroundColor = 'buttonface';
+	}	
+
+    function trangleShape() {
+    	  document.getElementById("animation").style.borderRadius = "0px";   	
+          document.getElementById("animation").style.border = "none";
+          document.getElementById("animation").style.width = "150px";          
+          document.getElementById("animation").style.height = "150px";   
+          document.getElementById("animation").style.backgroundColor = "#dddddd";
+
+          var elem = document.getElementById("animation");   
+          var location = 0;
+          var id = setInterval(frame, 3);
+          function frame() {
+            if (location == 650) {
+              document.getElementById("animation").style.width = "0px";
+              document.getElementById("animation").style.height = "0px";
+              document.getElementById("animation").style.borderBottom = "150px solid red";
+              document.getElementById("animation").style.borderLeft = "150px solid transparent";
+              document.getElementById("animation").style.backgroundColor = "transparent";
+              clearInterval(id);
+            } else {
+              location++; 
+              elem.style.top = location + 'px'; 
+              elem.style.left = location + 'px';
+            }
+          }
+    };
+
+    function pacman() {
+    	  document.getElementById("animation").style.borderRadius = "0px";   	
+          document.getElementById("animation").style.border = "none";
+          document.getElementById("animation").style.width = "150px";          
+          document.getElementById("animation").style.height = "150px";   
+          document.getElementById("animation").style.backgroundColor = "#dddddd";
+          var elem = document.getElementById("animation");   
+          var location = 0;
+          var id = setInterval(frame, 3);
+          function frame() {
+            if (location == 499) {
+              document.getElementById("animation").style.width = "0px";
+              document.getElementById("animation").style.height = "0px";
+              document.getElementById("animation").style.borderRight = "150px solid transparent";
+              document.getElementById("animation").style.borderTop = "150px solid yellow";    
+              document.getElementById("animation").style.borderLeft = "150px solid yellow";
+			  document.getElementById("animation").style.borderBottom = "150px solid yellow";
+              document.getElementById("animation").style.borderTopLeftRadius = "150px";
+              document.getElementById("animation").style.borderTopRightRadius = "150px";    
+              document.getElementById("animation").style.borderBottomRightRadius = "150px";  
+              document.getElementById("animation").style.borderBottomLeftRadius = "150px";
+
+              document.getElementById("animation").style.backgroundColor = "transparent";                 			                           
+              clearInterval(id);
+            } else {
+              location++; 
+              elem.style.top = location + 'px'; 
+              elem.style.left = location + 'px';
+            }
+          }
+    };
+
+    function normal(obj) {
+        obj.style.fontSize = '14px'; 
+    	  document.getElementById("animation").style.borderRadius = "0px";   	
+          document.getElementById("animation").style.border = "none";
+          document.getElementById("animation").style.width = "150px";          
+          document.getElementById("animation").style.height = "150px";   
+          document.getElementById("animation").style.backgroundColor = "#dddddd";    
+
+	var elem = document.getElementById("animation");   
+	          var location = 0;
+	          var id = setInterval(frame, 3);
+	          function frame() {
+	            if (location == 650) {
+	              document.getElementById("animation").style.borderRadius = "180px";
+	              document.getElementById("animation").style.backgroundColor = "#FFFFAD";
+	              clearInterval(id);
+	            } else {
+	              location++; 
+	              elem.style.top = location + 'px'; 
+	              elem.style.left = location + 'px';
+	            }
+	          }
+    };
+
+
+
+    </script>
+</html>

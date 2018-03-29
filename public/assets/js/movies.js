@@ -26,12 +26,14 @@ function updateResults(data) {
 		for (var i = 0; i < data.Search.length; i++) {
 			var title = data.Search[i].Title;
 			var poster = data.Search[i].Poster;
-			resultList.append("<li class='title'><img src='" + poster + "' alt='" + title + "'><p>" + title + "</p></li>");
+			var imdbID = data.Search[i].imdbID;
+			resultList.append("<div class='title imgContainer'><a href='http://www.imdb.com/title/" + imdbID
+ + "' target='_blank'/'><img class='poster' src='" + poster + "' alt='" + title + "'><div class='transparentShield'><p class='titleText'>" + title + "</p></div></a></div>");
 		} 
 	} else {
 			var resultList = $("#dataResults");
 			resultList.empty();
-			resultList.append("<li class='title'><p>Please check your title and resubmit your inquery</p></li>");
+			resultList.append("<p class='title warning'>>Please check your title and resubmit your inquery</p>");
 		}
 
 }

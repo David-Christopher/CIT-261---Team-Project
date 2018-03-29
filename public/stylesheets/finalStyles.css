@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+/*****************/
+/*
+/* Author: Christopher D.
+/* dav08049@byui.edu
+/* Created: 3/2018
+/* Updated: 3/2018
+/*
+/* Purpose: Responsive web design stylesheet. To be used to for Movie API and CSS project
+/*
+**/
+
+a, h2, h3, h4 {
+    font-family: 'Work Sans', sans-serif;
+    color: #1F1F1F;
+    font-weight: 600;
+}
+
+h1, p {
+    font-family: 'Roboto Slab', serif;
+    color: #333333;
+}
+
+li.title{
+	display: inline-block;
+	list-style: none;
+}
+
+.glyphicon img{
+	width: 30px;
+}
